@@ -42,17 +42,41 @@ Taetgaegaerg
 
 ## Structure
   
-aertgerg
+### Dependency
   
+  * Spring Data MongoDB
+  * Spring Web
+  * Spring Boot DevTools
+
+### Directory
+```
+.
+└── mongoDbProject/
+    ├── MongoDbProjectApplication.java
+    ├── model/
+    │   └── Restaurent.java
+    ├── controller/
+    │   └── ResController.java
+    └── repo/
+        └── ResRepo.java
+```  
 <p align="right">(<a href="#top">back to top</a>)</p>    
 
 <div id="build2"></div>
   
 ## Built With
-  
+
+### Technology used
+
   * SpringBoot
   * java
   * mongoDB
+
+### Software used
+  
+  * Postman
+  * Robo 3t (mongoDB gui)
+  * Editor (VScode)
   
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -94,7 +118,7 @@ wgwrgw
 <!-- CONTACT -->
 ## Contact
 
-You may contact with me via gmail or any other way. All necessary contact info you will find at - 
+You may contact with me via gmail if needed. All necessary contact info you will find at - 
 <a href="https://hurutta.github.io"> my website. <a>
 
 
