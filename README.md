@@ -1,8 +1,5 @@
 
 # Restaurent Management System - Backend - SpringBoot REST using mongoDB noSQL
-
-Its a springBoot REST project.
-
   
   
 <div id="top"></div>
@@ -33,7 +30,8 @@ Its a springBoot REST project.
 
 ## About The Project
 
-Taetgaegaerg
+Its a springBoot REST API application for restaurent management system, which can be used for sending or receiving API containing data of orders of restaurent. I used mongoDB noSQL as database for this backend project.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -43,7 +41,7 @@ Taetgaegaerg
 ## Structure
   
 ### Dependency
-  
+  Dependecies imported and used for SpringBoot Application -
   * Spring Data MongoDB
   * Spring Web
   * Spring Boot DevTools
@@ -56,9 +54,12 @@ Taetgaegaerg
     ├── model/
     │   └── Restaurent.java
     ├── controller/
-    │   └── ResController.java
-    └── repo/
-        └── ResRepo.java
+    │   └── RestaurentController.java
+    ├── repository/
+    │   └── RestaurentRepository.java
+    └── service/
+        ├── RestaurentService.java
+        └── RestaurentServiceImpl.java
 ```  
 <p align="right">(<a href="#top">back to top</a>)</p>    
 
@@ -84,8 +85,6 @@ Taetgaegaerg
 
 
 
-
-
 <div id="usage2"></div>
 
 
@@ -93,7 +92,7 @@ Taetgaegaerg
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-efwefwf
+I tested this application by postman, set server port as `8888`. Server port can be changed at this directory - `src > main > resources > application.properties`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -106,7 +105,32 @@ efwefwf
 <!-- USAGE EXAMPLES -->
 ## Features
 
-wgwrgw
+* Rest endpoints 
+
+    * **POST:** http://localhost:8888/create : Add a new order to the database <br>  
+    Sample JSON for this request:
+     ```
+      {
+          "orderNo": 1,
+          "customerName": "Mr. Cat",
+          "items": "fish and water",
+          "cost": 12.50,
+          "paid": false
+      }
+     ```
+    * **GET:** http://localhost:8888/all/ : Get a complete list of all order
+    * **DELETE:** http://localhost:8888/remove/{orderId} : Delete an order by it's id
+    * **PUT:** http://localhost:8888/ : Update an existing order by it's orderId
+    Sample JSON for this request:
+     ```
+      {
+          "orderNo": 1,
+          "paid": true
+      }
+     ```
+    * **POST:** http://localhost:8888/info/{orderId}/ : Get info of an individual order by it's specific `orderId`
+    * **GET:** http://localhost:8888/info/ : Get brief info of all orders
+ 
   
 <p align="right">(<a href="#top">back to top</a>)</p>
 
